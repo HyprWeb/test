@@ -1,8 +1,9 @@
 version: '3'
-services: 
-  deployment-prod:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+services:
+  web:
+    stdin_open: true
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
     ports:
-      - '8211:80'
+      - '8081:80'
